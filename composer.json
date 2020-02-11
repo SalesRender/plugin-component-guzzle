@@ -1,0 +1,22 @@
+{
+  "name": "leadvertex/plugin-component-guzzle",
+  "description": "LeadVertex plugin guzzle helper",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Timur Kasumov aka XAKEPEHOK",
+      "email": "support@leadvertex.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Leadvertex\\Plugin\\Components\\Guzzle\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "guzzlehttp/guzzle": "^6.5"
+  }
+}
