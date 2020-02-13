@@ -19,17 +19,17 @@ class Guzzle
 
     private function __construct() {}
 
-    public static function getInstance(): Client
+    public static function getInstance(array $config = []): Client
     {
         $selfUri = $_ENV['LV_PLUGIN_SELF_URL'];
         $selfType = $_ENV['LV_PLUGIN_SELF_TYPE'];
 
         if (self::$client === null) {
-            self::$client = new Client([
+            self::$client = new Client(array_merge_recursive($config, [
                 'headers' => [
                     'User-Agent' => "LV-{$selfType}-PLUGIN/1.0 ({$selfUri})"
                 ],
-            ]);
+            ]));
         }
 
         return self::$client;
