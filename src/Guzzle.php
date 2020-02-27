@@ -21,7 +21,7 @@ class Guzzle
 
     public static function getInstance(array $config = []): Client
     {
-        $selfUri = $_ENV['LV_PLUGIN_SELF_URL'];
+        $selfUri = $_ENV['LV_PLUGIN_SELF_URI'];
         $selfType = $_ENV['LV_PLUGIN_SELF_TYPE'];
 
         if (self::$client === null) {
