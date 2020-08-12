@@ -21,13 +21,13 @@ class Guzzle
 
     public static function getInstance(array $config = []): Client
     {
-        $selfUri = $_ENV['LV_PLUGIN_SELF_URI'];
+        $selfUri = rtrim($_ENV['LV_PLUGIN_SELF_URI'], '/');
         $selfType = $_ENV['LV_PLUGIN_SELF_TYPE'];
 
         if (self::$client === null) {
             self::$client = new Client(array_merge_recursive($config, [
                 'headers' => [
-                    'User-Agent' => "LV-{$selfType}-PLUGIN/1.0 ({$selfUri})"
+                    'User-Agent' => "LV-PLUGIN-{$selfType}-BOT/1.0 (+{$selfUri}/info)"
                 ],
             ]));
         }
