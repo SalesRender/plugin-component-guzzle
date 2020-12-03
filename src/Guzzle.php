@@ -10,19 +10,19 @@ namespace Leadvertex\Plugin\Components\Guzzle;
 
 
 use GuzzleHttp\Client;
+use Leadvertex\Plugin\Components\Info\Info;
 
 class Guzzle
 {
 
-    /** @var Client */
-    private static $client;
+    private static Client $client;
 
     private function __construct() {}
 
     public static function getInstance(array $config = []): Client
     {
         $selfUri = rtrim($_ENV['LV_PLUGIN_SELF_URI'], '/');
-        $selfType = $_ENV['LV_PLUGIN_SELF_TYPE'];
+        $selfType = (string) Info::getInstance()->getType();
 
         if (self::$client === null) {
             self::$client = new Client(array_merge_recursive($config, [
