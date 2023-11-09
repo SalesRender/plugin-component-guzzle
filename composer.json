@@ -1,23 +1,23 @@
 {
-  "name": "leadvertex/plugin-component-guzzle",
-  "description": "LeadVertex plugin guzzle helper",
+  "name": "salesrender/plugin-component-guzzle",
+  "description": "SalesRender plugin guzzle helper",
   "type": "library",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
       "name": "Timur Kasumov aka XAKEPEHOK",
-      "email": "support@leadvertex.com"
+      "email": "support@salesrender.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Leadvertex\\Plugin\\Components\\Guzzle\\": "src/"
+      "SalesRender\\Plugin\\Components\\Guzzle\\": "src/"
     }
   },
   "require": {
     "php": ">=7.4.0",
     "guzzlehttp/guzzle": "^6.5",
-    "leadvertex/plugin-component-info": "^0.1.2"
+    "salesrender/plugin-component-info": "^0.1.2"
   }
 }

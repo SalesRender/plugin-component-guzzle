@@ -5,12 +5,12 @@
  * @author Timur Kasumov aka XAKEPEHOK
  */
 
-namespace Leadvertex\Plugin\Components\Guzzle;
+namespace SalesRender\Plugin\Components\Guzzle;
 
 
 
 use GuzzleHttp\Client;
-use Leadvertex\Plugin\Components\Info\Info;
+use SalesRender\Plugin\Components\Info\Info;
 
 class Guzzle
 {
