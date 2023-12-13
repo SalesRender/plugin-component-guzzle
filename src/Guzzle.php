@@ -27,7 +27,7 @@ class Guzzle
         if (!isset(self::$client)) {
             self::$client = new Client(array_merge_recursive($config, [
                 'headers' => [
-                    'User-Agent' => "LV-PLUGIN-{$selfType}-BOT/1.0 (+{$selfUri}/info)"
+                    'User-Agent' => "SR-PLUGIN-{$selfType}-BOT/1.0 (+{$selfUri}/info)"
                 ],
             ]));
         }

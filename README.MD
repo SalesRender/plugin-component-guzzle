@@ -2,7 +2,7 @@ Guzzle-wrapper for SalesRender plugins, that provide special user-agent format, 
  
 Example:
 ```http request
-User-Agent: LV-PLUGIN-MACROS-BOT/1.0 (+https://plugin.example.com/excel/info)
+User-Agent: SR-PLUGIN-MACROS-BOT/1.0 (+https://plugin.example.com/excel/info)
 ```
 
 Usage:
